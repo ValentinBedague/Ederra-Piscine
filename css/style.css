@@ -1,0 +1,14 @@
+/* Ederra Piscine - Custom styles */
+:root {
+  --ederra-white: #FFFFFF;
+  --ederra-blue: #193159;
+  --ederra-sky: #ABBFD8;
+  --ederra-orange: #EEA85A;
+}
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'DM Sans', system-ui, sans-serif; }
+
+/* Modal backdrop */
+.modal-backdrop { backdrop-filter: blur(4px); }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Ederra Piscine - Particuliers et Revendeurs">
+  <title>Contact - Ederra Piscine</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ederra-white': '#FFFFFF',
+            'ederra-blue': '#193159',
+            'ederra-sky': '#ABBFD8',
+            'ederra-orange': '#EEA85A',
+          },
+          fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-ederra-sky/20">
+    <nav class="w-full px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center">
+          <img src="logo/logo_ederra_piscine.svg" alt="Ederra Piscine" class="h-10 md:h-12 w-auto">
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium">Accueil</a>
+          <a href="prestations.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium">Nos Prestations</a>
+          <a href="contact.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden p-2 text-ederra-blue" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-ederra-sky/20">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Accueil</a>
+          <a href="prestations.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Nos Prestations</a>
+          <a href="contact.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow">
+    <section class="relative min-h-[70vh] flex items-center justify-center pt-16">
+      <div class="absolute inset-0">
+        <img src="images/contact-hero.jpg" alt="Contactez Ederra Piscine" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-ederra-blue/70"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">Comment pouvons-nous vous aider ?</h1>
+        <p class="text-xl text-ederra-sky mb-12 max-w-2xl mx-auto">
+          Que vous soyez un particulier ou un professionnel souhaitant devenir revendeur, notre équipe est à votre écoute.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button id="btn-particulier" class="inline-flex items-center justify-center gap-3 bg-ederra-orange hover:bg-ederra-orange/90 text-ederra-blue font-semibold px-8 py-4 rounded transition-colors">
+            👤 Je suis un Particulier
+          </button>
+          <button id="btn-revendeur" class="inline-flex items-center justify-center gap-3 bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-4 rounded transition-colors border-2 border-white">
+            🏢 Je souhaite devenir Revendeur
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Particulier -->
+  <div id="modal-particulier" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div data-modal-backdrop class="absolute inset-0 bg-ederra-blue/80 modal-backdrop"></div>
+    <div class="relative bg-white rounded shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="p-6 md:p-8">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold text-ederra-blue">Demande Particulier</h3>
+          <button data-modal-close class="p-2 text-ederra-blue hover:text-ederra-orange rounded">✕</button>
+        </div>
+        <form data-modal-form class="space-y-5">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="part-prenom" class="block text-sm font-medium text-ederra-blue mb-2">Prénom *</label>
+              <input type="text" id="part-prenom" name="prenom" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="Votre prénom">
+            </div>
+            <div>
+              <label for="part-nom" class="block text-sm font-medium text-ederra-blue mb-2">Nom *</label>
+              <input type="text" id="part-nom" name="nom" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="Votre nom">
+            </div>
+          </div>
+          <div>
+            <label for="part-email" class="block text-sm font-medium text-ederra-blue mb-2">Email *</label>
+            <input type="email" id="part-email" name="email" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="votre@email.fr">
+          </div>
+          <div>
+            <label for="part-telephone" class="block text-sm font-medium text-ederra-blue mb-2">Téléphone *</label>
+            <input type="tel" id="part-telephone" name="telephone" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="06 12 34 56 78">
+          </div>
+          <div>
+            <label for="part-type-projet" class="block text-sm font-medium text-ederra-blue mb-2">Type de projet *</label>
+            <select id="part-type-projet" name="type-projet" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none bg-white">
+              <option value="">Sélectionnez...</option>
+              <option value="kit-autonome">Kit Autonome</option>
+              <option value="kit-accompagne">Kit Accompagné</option>
+              <option value="prete-a-plonger">Prête-à-Plonger</option>
+            </select>
+          </div>
+          <div>
+            <label for="part-message" class="block text-sm font-medium text-ederra-blue mb-2">Message *</label>
+            <textarea id="part-message" name="message" required rows="4" class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none resize-none" placeholder="Décrivez votre projet..."></textarea>
+          </div>
+          <div class="flex gap-3 pt-4">
+            <button type="submit" class="flex-1 bg-ederra-orange hover:bg-ederra-orange/90 text-ederra-blue font-semibold py-3 rounded">Envoyer</button>
+            <button type="button" data-modal-close class="px-6 py-3 border border-ederra-sky rounded text-ederra-blue hover:bg-ederra-sky/20">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Revendeur -->
+  <div id="modal-revendeur" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div data-modal-backdrop class="absolute inset-0 bg-ederra-blue/80 modal-backdrop"></div>
+    <div class="relative bg-white rounded shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+      <div class="p-6 md:p-8">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="text-2xl font-bold text-ederra-blue">Demande Revendeur</h3>
+          <button data-modal-close class="p-2 text-ederra-blue hover:text-ederra-orange rounded">✕</button>
+        </div>
+        <form data-modal-form class="space-y-5">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label for="rev-prenom" class="block text-sm font-medium text-ederra-blue mb-2">Prénom *</label>
+              <input type="text" id="rev-prenom" name="prenom" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="Votre prénom">
+            </div>
+            <div>
+              <label for="rev-nom" class="block text-sm font-medium text-ederra-blue mb-2">Nom *</label>
+              <input type="text" id="rev-nom" name="nom" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="Votre nom">
+            </div>
+          </div>
+          <div>
+            <label for="rev-societe" class="block text-sm font-medium text-ederra-blue mb-2">Société *</label>
+            <input type="text" id="rev-societe" name="societe" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="Nom de votre société">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="rev-siret" class="block text-sm font-medium text-ederra-blue mb-2">N° SIRET *</label>
+              <input type="text" id="rev-siret" name="siret" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="123 456 789 00012">
+            </div>
+            <div>
+              <label for="rev-tva" class="block text-sm font-medium text-ederra-blue mb-2">N° TVA Intracommunautaire</label>
+              <input type="text" id="rev-tva" name="tva" class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="FR12345678901">
+            </div>
+          </div>
+          <div>
+            <label for="rev-adresse" class="block text-sm font-medium text-ederra-blue mb-2">Adresse *</label>
+            <input type="text" id="rev-adresse" name="adresse" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="123 rue de la Piscine">
+          </div>
+          <div>
+            <label for="rev-codepostal" class="block text-sm font-medium text-ederra-blue mb-2">Code postal *</label>
+            <input type="text" id="rev-codepostal" name="codepostal" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="64210" maxlength="5" pattern="[0-9]{5}">
+          </div>
+          <div>
+            <label for="rev-email" class="block text-sm font-medium text-ederra-blue mb-2">Email professionnel *</label>
+            <input type="email" id="rev-email" name="email" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="contact@societe.fr">
+          </div>
+          <div>
+            <label for="rev-telephone" class="block text-sm font-medium text-ederra-blue mb-2">Téléphone *</label>
+            <input type="tel" id="rev-telephone" name="telephone" required class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none" placeholder="05 40 12 34 56">
+          </div>
+          <div>
+            <label for="rev-message" class="block text-sm font-medium text-ederra-blue mb-2">Message *</label>
+            <textarea id="rev-message" name="message" required rows="5" class="w-full px-4 py-3 rounded border border-ederra-sky/50 focus:ring-2 focus:ring-ederra-orange outline-none resize-none" placeholder="Présentez votre activité et vos motivations..."></textarea>
+          </div>
+          <div class="flex gap-3 pt-4">
+            <button type="submit" class="flex-1 bg-ederra-orange hover:bg-ederra-orange/90 text-ederra-blue font-semibold py-3 rounded">Envoyer</button>
+            <button type="button" data-modal-close class="px-6 py-3 border border-ederra-sky rounded text-ederra-blue hover:bg-ederra-sky/20">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-ederra-blue text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div>
+          <img src="logo/logo_ederra_piscine.svg" alt="Ederra Piscine" class="h-10 md:h-12 w-auto mb-4">
+          <p class="text-ederra-sky/90 text-sm">Vente de piscines en kit et prêt-à-plonger. Plongez dans la qualité.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-ederra-sky mb-4">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-ederra-sky/90 hover:text-ederra-orange transition-colors">Accueil</a></li>
+            <li><a href="prestations.html" class="text-ederra-sky/90 hover:text-ederra-orange transition-colors">Nos Prestations</a></li>
+            <li><a href="contact.html" class="text-ederra-sky/90 hover:text-ederra-orange transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-ederra-sky mb-4">Contact</h4>
+          <a href="tel:0540073565" class="flex items-center gap-3 text-ederra-sky/90 hover:text-ederra-orange mb-4">📞 05 40 07 35 65</a>
+          <a href="https://www.google.com/maps?q=435+Av.+d%27Espagne,+64210+Bidart" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-ederra-sky/90 hover:text-ederra-orange transition-colors not-italic">📍 435 Av. d'Espagne, 64210 Bidart</a>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-ederra-sky/20 text-center text-ederra-sky/70 text-sm">
+        © 2025 Ederra Piscine. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
