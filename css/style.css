@@ -12,3 +12,25 @@ body { font-family: 'DM Sans', system-ui, sans-serif; }
 
 /* Modal backdrop */
 .modal-backdrop { backdrop-filter: blur(4px); }
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.modal-card-enter    { animation: modalIn     0.25s ease-out; }
+.modal-backdrop-enter { animation: backdropIn  0.25s ease-out; }
+
+@keyframes modalOut {
+  from { opacity: 1; transform: translateY(0)    scale(1); }
+  to   { opacity: 0; transform: translateY(12px) scale(0.97); }
+}
+@keyframes backdropOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+.modal-card-leave    { animation: modalOut    0.2s ease-in forwards; }
+.modal-backdrop-leave { animation: backdropOut 0.2s ease-in forwards; }
