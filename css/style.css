@@ -1,9 +1,11 @@
 /* Ederra Piscine - Custom styles */
 :root {
   --ederra-white: #FFFFFF;
-  --ederra-blue: #193159;
-  --ederra-sky: #ABBFD8;
-  --ederra-orange: #EEA85A;
+  --ederra-teal: #0399A6;
+  --ederra-lagoon: #0A7F8C;
+  --ederra-cyan: #4FD1DB;
+  --ederra-deep: #03354A;
+  --ederra-aqua: #D4EDED;
 }
 
 html { scroll-behavior: smooth; }

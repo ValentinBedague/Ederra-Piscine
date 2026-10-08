@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ederra Piscine - Vente de piscines en kit et prêt-à-plonger. Plongez dans la qualité.">
   <title>Ederra Piscine - Piscines en kit et prêt-à-plonger</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="favicon-vif.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
@@ -16,12 +16,11 @@
         extend: {
           colors: {
             'ederra-white': '#FFFFFF',
-            'ederra-blue': '#193159',
-            'ederra-sky': '#ABBFD8',
-            'ederra-orange': '#EEA85A',
-            'ederra-teal': '#0399A6',
-            'ederra-deep': '#03354A',
-            'ederra-aqua': '#D4EDED',
+            'ederra-teal': '#0399A6',   // turquoise vif (titres, accents)
+            'ederra-lagoon': '#0A7F8C', // turquoise foncé (boutons texte blanc)
+            'ederra-cyan': '#4FD1DB',   // cyan lumineux (accents sur fond sombre)
+            'ederra-deep': '#03354A',   // bleu pétrole (texte, footer)
+            'ederra-aqua': '#D4EDED',   // aqua clair (fonds)
           },
           fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
         }
@@ -32,26 +31,26 @@
 </head>
 <body class="min-h-screen flex flex-col">
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-ederra-sky/20">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-ederra-teal/20">
     <nav class="w-full px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 md:h-28">
         <a href="index.html" class="flex items-center">
-          <img src="images/logo_ederra.svg" alt="Ederra Piscine" class="h-16 md:h-20 lg:h-24 w-auto">
+          <img src="images/logo_ederra_vif.svg" alt="Ederra Piscine" class="h-16 md:h-20 lg:h-24 w-auto">
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium text-lg">Accueil</a>
-          <a href="prestations.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium text-lg">Nos Prestations</a>
-          <a href="contact.html" class="text-ederra-blue hover:text-ederra-orange transition-colors font-medium text-lg">Contact</a>
+          <a href="index.html" class="text-ederra-deep hover:text-ederra-teal transition-colors font-medium text-lg">Accueil</a>
+          <a href="prestations.html" class="text-ederra-deep hover:text-ederra-teal transition-colors font-medium text-lg">Nos Prestations</a>
+          <a href="contact.html" class="text-ederra-deep hover:text-ederra-teal transition-colors font-medium text-lg">Contact</a>
         </div>
-        <button id="menu-btn" class="md:hidden p-2 text-ederra-blue" aria-label="Menu">
+        <button id="menu-btn" class="md:hidden p-2 text-ederra-deep" aria-label="Menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-ederra-sky/20">
+      <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-ederra-teal/20">
         <div class="flex flex-col gap-4">
-          <a href="index.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Accueil</a>
-          <a href="prestations.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Nos Prestations</a>
-          <a href="contact.html" class="text-ederra-blue hover:text-ederra-orange font-medium">Contact</a>
+          <a href="index.html" class="text-ederra-deep hover:text-ederra-teal font-medium">Accueil</a>
+          <a href="prestations.html" class="text-ederra-deep hover:text-ederra-teal font-medium">Nos Prestations</a>
+          <a href="contact.html" class="text-ederra-deep hover:text-ederra-teal font-medium">Contact</a>
         </div>
       </div>
     </nav>
@@ -66,28 +65,28 @@
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center text-shadow-hero">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-          Ederra Piscine :<br><span class="text-ederra-orange">Un réseau de partenaires professionnels</span>
+          Ederra Piscine :<br><span class="text-ederra-cyan">Un réseau de partenaires professionnels</span>
         </h1>
         <p class="text-xl md:text-2xl text-white font-light mb-6 max-w-2xl mx-auto">
           Votre piscine en béton armé en structure blocs polystyrène technique
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-0 sm:gap-0 mb-10 mt-8">
           <div class="flex flex-col items-center px-8 py-4">
-            <span class="block w-8 h-0.5 bg-ederra-orange mb-3"></span>
+            <span class="block w-8 h-0.5 bg-ederra-cyan mb-3"></span>
             <span class="text-white font-medium text-sm uppercase tracking-widest">Piscine en kit</span>
           </div>
           <span class="hidden sm:block w-px h-10 bg-white/40"></span>
           <div class="flex flex-col items-center px-8 py-4">
-            <span class="block w-8 h-0.5 bg-ederra-orange mb-3"></span>
+            <span class="block w-8 h-0.5 bg-ederra-cyan mb-3"></span>
             <span class="text-white font-medium text-sm uppercase tracking-widest">Kit accompagné</span>
           </div>
           <span class="hidden sm:block w-px h-10 bg-white/40"></span>
           <div class="flex flex-col items-center px-8 py-4">
-            <span class="block w-8 h-0.5 bg-ederra-orange mb-3"></span>
+            <span class="block w-8 h-0.5 bg-ederra-cyan mb-3"></span>
             <span class="text-white font-medium text-sm uppercase tracking-widest">Prête à plonger</span>
           </div>
         </div>
-        <a href="prestations.html" class="inline-flex items-center gap-2 bg-ederra-orange hover:bg-ederra-orange/90 text-ederra-blue font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/40 hover:-translate-y-0.5 transition-all [text-shadow:none]">
+        <a href="prestations.html" class="inline-flex items-center gap-2 bg-white hover:bg-ederra-cyan text-ederra-deep font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/40 hover:-translate-y-0.5 transition-all [text-shadow:none]">
           Découvrir nos prestations
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -100,13 +99,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl">
           <h2 class="text-3xl md:text-4xl font-bold text-ederra-teal mb-6">Qui sommes-nous ?</h2>
-          <p class="text-lg text-ederra-blue/90 leading-relaxed mb-4">
+          <p class="text-lg text-ederra-deep/90 leading-relaxed mb-4">
             <strong class="text-ederra-teal">Ederra Piscine</strong> allie expertise et simplicité pour vous offrir des piscines de qualité, adaptées à vos envies et à votre budget.
           </p>
-          <p class="text-lg text-ederra-blue/90 leading-relaxed mb-4">
+          <p class="text-lg text-ederra-deep/90 leading-relaxed mb-4">
             Que vous soyez un manuel passionné prêt à réaliser vous-même votre installation, ou que vous préfériez une solution clé en main, nous avons la formule qui vous correspond.
           </p>
-          <p class="text-lg text-ederra-blue/90 leading-relaxed">
+          <p class="text-lg text-ederra-deep/90 leading-relaxed">
             Notre engagement : des matériaux de qualité, un accompagnement personnalisé et des piscines qui s'intègrent harmonieusement dans les jardins de maisons individuelles.
           </p>
         </div>
@@ -134,8 +133,8 @@
               <img src="images/kit-autonome-2.jpg" alt="Kit Autonome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
-              <h3 class="text-xl font-semibold text-ederra-blue mb-3">Kit Autonome</h3>
-              <p class="text-ederra-blue/80 leading-relaxed mb-4">Pour les manuels. Livraison complète du matériel, vous réalisez l'installation selon nos instructions.</p>
+              <h3 class="text-xl font-semibold text-ederra-deep mb-3">Kit Autonome</h3>
+              <p class="text-ederra-deep/80 leading-relaxed mb-4">Pour les manuels. Livraison complète du matériel, vous réalisez l'installation selon nos instructions.</p>
               <span class="inline-flex items-center gap-2 text-ederra-teal font-semibold">En savoir plus →</span>
             </div>
           </a>
@@ -144,8 +143,8 @@
               <img src="images/kit-accompagne.jpg" alt="Kit Accompagné" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
-              <h3 class="text-xl font-semibold text-ederra-blue mb-3">Kit Accompagné</h3>
-              <p class="text-ederra-blue/80 leading-relaxed mb-4">Le compromis idéal. Vous construisez, nous vous assistons sur les étapes clés.</p>
+              <h3 class="text-xl font-semibold text-ederra-deep mb-3">Kit Accompagné</h3>
+              <p class="text-ederra-deep/80 leading-relaxed mb-4">Le compromis idéal. Vous construisez, nous vous assistons sur les étapes clés.</p>
               <span class="inline-flex items-center gap-2 text-ederra-teal font-semibold">En savoir plus →</span>
             </div>
           </a>
@@ -154,15 +153,15 @@
               <img src="images/prete-a-plonger.jpg" alt="Prête-à-Plonger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
-              <h3 class="text-xl font-semibold text-ederra-blue mb-3">Prête-à-Plonger</h3>
-              <p class="text-ederra-blue/80 leading-relaxed mb-4">Installation clé en main par nos experts. Vous profitez sans vous soucier.</p>
+              <h3 class="text-xl font-semibold text-ederra-deep mb-3">Prête-à-Plonger</h3>
+              <p class="text-ederra-deep/80 leading-relaxed mb-4">Installation clé en main par nos experts. Vous profitez sans vous soucier.</p>
               <span class="inline-flex items-center gap-2 text-ederra-teal font-semibold">En savoir plus →</span>
             </div>
           </a>
         </div>
 
         <div class="text-center mt-12">
-          <a href="prestations.html" class="inline-flex items-center gap-2 bg-ederra-orange hover:bg-ederra-orange/90 text-ederra-blue font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/30 hover:-translate-y-0.5 transition-all">
+          <a href="prestations.html" class="inline-flex items-center gap-2 bg-white hover:bg-ederra-aqua text-ederra-deep font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/30 hover:-translate-y-0.5 transition-all">
             Voir le catalogue complet →
           </a>
         </div>
@@ -171,31 +170,31 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-ederra-blue text-white">
+  <footer class="bg-ederra-deep text-white">
     <div class="w-full px-8 sm:px-12 lg:px-20 py-12 md:py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr] gap-8 md:gap-12">
         <div class="md:col-span-2 lg:col-span-1">
-          <img src="images/logo_ederra_orange.svg" alt="Ederra Piscine" class="w-full max-w-[380px] h-auto mb-4">
+          <img src="images/logo_ederra_vif_footer.svg" alt="Ederra Piscine" class="w-full max-w-[380px] h-auto mb-4">
           <p class="text-white/80 text-lg font-light">Vente de piscines en kit et prêt-à-plonger.<br>Plongez dans la qualité.</p>
         </div>
         <div class="text-center">
           <h4 class="text-lg font-normal uppercase tracking-wider text-white mb-4">Navigation</h4>
           <ul class="space-y-3 text-lg font-light">
-            <li><a href="index.html" class="text-white/80 hover:text-ederra-orange transition-colors">Accueil</a></li>
-            <li><a href="prestations.html" class="text-white/80 hover:text-ederra-orange transition-colors">Nos Prestations</a></li>
-            <li><a href="contact.html" class="text-white/80 hover:text-ederra-orange transition-colors">Contact</a></li>
+            <li><a href="index.html" class="text-white/80 hover:text-ederra-cyan transition-colors">Accueil</a></li>
+            <li><a href="prestations.html" class="text-white/80 hover:text-ederra-cyan transition-colors">Nos Prestations</a></li>
+            <li><a href="contact.html" class="text-white/80 hover:text-ederra-cyan transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-lg font-normal uppercase tracking-wider text-white mb-4">Contact</h4>
-          <a href="tel:0540073565" class="flex items-center gap-3 text-lg font-light text-white/80 hover:text-ederra-orange mb-4">📞 05 40 07 35 65</a>
-          <a href="mailto:contact@ederra-piscine.fr" class="flex items-center gap-3 text-lg font-light text-white/80 hover:text-ederra-orange transition-colors mb-4">✉️ contact@ederra-piscine.fr</a>
-          <a href="https://www.google.com/maps?q=435+Av.+d%27Espagne,+64210+Bidart" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-lg font-light text-white/80 hover:text-ederra-orange transition-colors not-italic">
+          <a href="tel:0540073565" class="flex items-center gap-3 text-lg font-light text-white/80 hover:text-ederra-cyan mb-4">📞 05 40 07 35 65</a>
+          <a href="mailto:contact@ederra-piscine.fr" class="flex items-center gap-3 text-lg font-light text-white/80 hover:text-ederra-cyan transition-colors mb-4">✉️ contact@ederra-piscine.fr</a>
+          <a href="https://www.google.com/maps?q=435+Av.+d%27Espagne,+64210+Bidart" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-lg font-light text-white/80 hover:text-ederra-cyan transition-colors not-italic">
             📍 435 Av. d'Espagne, 64210 Bidart, France
           </a>
         </div>
       </div>
-      <div class="mt-12 pt-8 border-t border-ederra-sky/20 text-center text-white/60 text-lg font-light">
+      <div class="mt-12 pt-8 border-t border-white/15 text-center text-white/60 text-lg font-light">
         © <span class="footer-year"></span> Ederra Piscine. Tous droits réservés.
       </div>
     </div>
