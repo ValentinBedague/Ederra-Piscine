@@ -10,6 +10,17 @@ html { scroll-behavior: smooth; }
 
 body { font-family: 'DM Sans', system-ui, sans-serif; }
 
+/* Fond turquoise façon "eau de piscine" (accueil) */
+.bg-water {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 100% 100%, rgba(3, 53, 74, 0.45), transparent 70%),
+    linear-gradient(160deg, #13B5C1 0%, #0399A6 45%, #0A7486 100%);
+}
+
+/* Lisibilité du texte blanc posé sur photo */
+.text-shadow-hero { text-shadow: 0 2px 14px rgba(3, 53, 74, 0.55); }
+
 /* Modal backdrop */
 .modal-backdrop { backdrop-filter: blur(4px); }
 
