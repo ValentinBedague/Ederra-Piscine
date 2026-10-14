@@ -4,6 +4,8 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/prestations", "destination": "/prestations.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/revendeurs", "destination": "/revendeurs.html" },
+    { "source": "/revendeur", "destination": "/revendeur.html" }
   ]
 }

@@ -53,6 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal('btn-particulier', 'modal-particulier');
   initModal('btn-revendeur', 'modal-revendeur');
 
+  // contact.html#revendeur (lien "Devenir revendeur") : ouvre directement le formulaire revendeur
+  if (location.hash === '#revendeur') document.getElementById('btn-revendeur')?.click();
+
   // Form submissions (prevent default, close modal)
   document.querySelectorAll('[data-modal-form]').forEach(form => {
     form.addEventListener('submit', (e) => {
