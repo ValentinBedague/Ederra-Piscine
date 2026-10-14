@@ -66,21 +66,8 @@
   }
 
   function initListe(root) {
-    const grid = root.querySelector('[data-grille]');
-    const compteur = root.querySelector('[data-compteur]');
-    const vide = root.querySelector('[data-vide]');
-    const recherche = document.querySelector('[data-recherche]');
-    const normalise = (s) => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-
-    const afficher = (q = '') => {
-      const n = normalise(q.trim());
-      const liste = REVENDEURS.filter((r) => !n || normalise([r.nom, r.ville, r.codePostal, departement(r)].join(' ')).includes(n));
-      grid.innerHTML = liste.map(carte).join('');
-      compteur.textContent = `${liste.length} revendeur${liste.length > 1 ? 's' : ''}${n ? ' trouvé' + (liste.length > 1 ? 's' : '') : ''}`;
-      vide.classList.toggle('hidden', liste.length > 0);
-    };
-    recherche?.addEventListener('input', (e) => afficher(e.target.value));
-    afficher();
+    root.querySelector('[data-grille]').innerHTML = REVENDEURS.map(carte).join('');
+    root.querySelector('[data-compteur]').textContent = `${REVENDEURS.length} revendeur${REVENDEURS.length > 1 ? 's' : ''}`;
   }
 
   // ---------- Fiche ----------
@@ -104,10 +91,11 @@
     document.title = `${r.nom} - ${r.ville} | Revendeur Ederra Piscine`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', `${r.nom}, revendeur Ederra Piscine à ${r.ville} : adresse, plan d'accès et contact.`);
 
+    const aCompleter = (champ) => `<span class="italic text-ederra-deep/60">${champ} à compléter</span>`;
     const coords = [
-      ligne('pin', 'Adresse', `${r.adresse ? esc(r.adresse) + '<br>' : '<span class="italic text-ederra-deep/60">Adresse à compléter</span><br>'}${esc(villeComplete(r))}`),
-      r.telephone && ligne('phone', 'Téléphone', `<a href="${telHref(r.telephone)}" class="hover:text-ederra-teal transition-colors">${esc(r.telephone)}</a>`),
-      r.email && ligne('mail', 'Email', `<a href="mailto:${esc(r.email)}" class="hover:text-ederra-teal transition-colors break-all">${esc(r.email)}</a>`),
+      ligne('pin', 'Adresse', `${r.adresse ? esc(r.adresse) : aCompleter('Adresse')}<br>${esc(villeComplete(r))}`),
+      ligne('phone', 'Téléphone', r.telephone ? `<a href="${telHref(r.telephone)}" class="hover:text-ederra-teal transition-colors">${esc(r.telephone)}</a>` : aCompleter('Téléphone')),
+      ligne('mail', 'Email', r.email ? `<a href="mailto:${esc(r.email)}" class="hover:text-ederra-teal transition-colors break-all">${esc(r.email)}</a>` : aCompleter('Email')),
       r.site && ligne('globe', 'Site web', `<a href="${esc(siteHref(r.site))}" target="_blank" rel="noopener noreferrer" class="hover:text-ederra-teal transition-colors break-all">${esc(r.site.replace(/^https?:\/\//, ''))}</a>`),
       r.horaires && ligne('clock', 'Horaires', esc(r.horaires).replace(/\n/g, '<br>')),
     ].filter(Boolean).join('');
@@ -131,7 +119,8 @@
             ${visuel(r, 'w-full aspect-[4/3]')}
           </div>
           <div class="bg-white rounded shadow-xl shadow-ederra-deep/10 border-t-4 border-ederra-teal p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-ederra-deep mb-6">Coordonnées</h2>
+            <h2 class="text-2xl font-bold text-ederra-deep mb-4">Coordonnées</h2>
+            ${r.situation ? `<p class="text-ederra-deep/80 leading-relaxed mb-6 pl-4 border-l-4 border-ederra-aqua">${esc(r.situation)}</p>` : ''}
             <ul class="space-y-5">${coords}</ul>
             <div class="mt-8 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
               ${r.telephone ? `<a href="${telHref(r.telephone)}" class="flex-1 inline-flex items-center justify-center gap-2 bg-ederra-lagoon hover:bg-ederra-deep text-white font-semibold px-5 py-3 rounded transition-colors">${icon('phone', 'w-4 h-4')} Appeler</a>` : ''}
