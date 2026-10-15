@@ -100,6 +100,13 @@
       r.horaires && ligne('clock', 'Horaires', esc(r.horaires).replace(/\n/g, '<br>')),
     ].filter(Boolean).join('');
 
+    // Modale "Demande Particulier" de la fiche : indique le revendeur concerné
+    const nomRevendeur = `${r.nom} – ${r.ville}`;
+    const champRevendeur = document.querySelector('#modal-particulier [name="revendeur"]');
+    if (champRevendeur) champRevendeur.value = nomRevendeur;
+    const mention = document.querySelector('#modal-particulier [data-modal-revendeur]');
+    if (mention) mention.textContent = r.ville;
+
     root.querySelector('[data-fiche]').innerHTML = `
       <section class="pt-20 md:pt-28 bg-water">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 text-white">
@@ -141,7 +148,7 @@
               <p class="text-2xl md:text-3xl font-bold text-white text-shadow-hero">Un projet piscine ?</p>
               <p class="text-white/90 text-lg mt-1">Demandez votre devis, nous vous mettons en relation avec ce revendeur.</p>
             </div>
-            <a href="contact.html" class="shrink-0 inline-flex items-center gap-2 bg-white hover:bg-ederra-aqua text-ederra-deep font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/30 hover:-translate-y-0.5 transition-all">Demander un devis →</a>
+            <button type="button" data-modal-open="modal-particulier" class="shrink-0 inline-flex items-center gap-2 bg-white hover:bg-ederra-aqua text-ederra-deep font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/30 hover:-translate-y-0.5 transition-all">Demander un devis →</button>
           </div>
         </div>
       </section>`;

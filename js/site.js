@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function initModal(openBtnId, modalId) {
     const openBtn = document.getElementById(openBtnId);
     const modal = document.getElementById(modalId);
-    if (!openBtn || !modal) return;
+    if (!modal) return;
 
     const backdrop = modal.querySelector('[data-modal-backdrop]');
     const card = modal.querySelector('[onclick]');
 
-    openBtn.addEventListener('click', () => {
+    const open = () => {
       modal.classList.remove('hidden');
       backdrop?.classList.add('modal-backdrop-enter');
       card?.classList.add('modal-card-enter');
@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         card?.classList.remove('modal-card-enter');
       }, 260);
       document.body.style.overflow = 'hidden';
+    };
+    openBtn?.addEventListener('click', open);
+    // Boutons ajoutés dynamiquement (ex. fiche revendeur) : data-modal-open="<id de la modale>"
+    document.addEventListener('click', (e) => {
+      if (e.target.closest(`[data-modal-open="${modalId}"]`)) open();
     });
 
     const close = () => {
