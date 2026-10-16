@@ -81,7 +81,8 @@
           </div>
           <button data-modal-close class="p-2 text-nautea-deep hover:text-nautea-teal rounded">✕</button>
         </div>
-        <form data-modal-form class="space-y-5">
+        <form data-modal-form data-form-type="devis-revendeur" class="space-y-5">
+          <div class="hidden" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
           <input type="hidden" name="revendeur" value="">
           <div class="grid grid-cols-2 gap-4">
             <div>

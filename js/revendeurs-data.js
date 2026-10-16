@@ -5,10 +5,11 @@
 //              ex. 'piscines-dupont-bayonne' -> revendeur.html#piscines-dupont-bayonne
 //   photo      photo de la devanture, à déposer dans images/revendeurs/ (laisser '' = visuel par défaut)
 //   situation  court paragraphe affiché dans les coordonnées (ex. 'Le magasin se situe à l'entrée de la zone…')
-//   telephone, email : laisser '' si inconnu (affiché "à compléter")
+//   email      obligatoire : les demandes de devis de la fiche sont envoyées à cette adresse
+//   telephone  laisser '' si inconnu (affiché "à compléter")
 //   site, horaires : laisser '' si inconnu, la ligne n'est alors pas affichée
 //   exemple    true = fiche de démonstration (badge "Exemple") — à supprimer pour les vrais revendeurs
-window.NAUTEA_REVENDEURS = [
+const NAUTEA_REVENDEURS = [
   {
     slug: 'exemple-bayonne',
     nom: 'Revendeur exemple',
@@ -52,3 +53,7 @@ window.NAUTEA_REVENDEURS = [
     exemple: true,
   },
 ];
+
+// Utilisé par le site (navigateur) et par l'envoi des formulaires (api/contact.js)
+if (typeof window !== 'undefined') window.NAUTEA_REVENDEURS = NAUTEA_REVENDEURS;
+if (typeof module !== 'undefined') module.exports = NAUTEA_REVENDEURS;

@@ -100,10 +100,9 @@
       r.horaires && ligne('clock', 'Horaires', esc(r.horaires).replace(/\n/g, '<br>')),
     ].filter(Boolean).join('');
 
-    // Modale "Demande Particulier" de la fiche : indique le revendeur concerné
-    const nomRevendeur = `${r.nom} – ${r.ville}`;
+    // Modale "Demande de devis" de la fiche : identifiant du revendeur (l'API retrouve son email)
     const champRevendeur = document.querySelector('#modal-particulier [name="revendeur"]');
-    if (champRevendeur) champRevendeur.value = nomRevendeur;
+    if (champRevendeur) champRevendeur.value = r.slug;
     const mention = document.querySelector('#modal-particulier [data-modal-revendeur]');
     if (mention) mention.textContent = r.ville;
 

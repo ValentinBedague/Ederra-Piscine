@@ -97,7 +97,8 @@
           <h3 class="text-2xl font-bold text-nautea-deep">Demande Particulier</h3>
           <button data-modal-close class="p-2 text-nautea-deep hover:text-nautea-teal rounded">✕</button>
         </div>
-        <form data-modal-form class="space-y-5">
+        <form data-modal-form data-form-type="particulier" class="space-y-5">
+          <div class="hidden" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label for="part-prenom" class="block text-sm font-medium text-nautea-deep mb-2">Prénom *</label>
@@ -151,7 +152,8 @@
           <h3 class="text-2xl font-bold text-nautea-teal">Demande Revendeur</h3>
           <button data-modal-close class="p-2 text-nautea-teal hover:text-nautea-deep rounded">✕</button>
         </div>
-        <form data-modal-form class="space-y-5">
+        <form data-modal-form data-form-type="revendeur" class="space-y-5">
+          <div class="hidden" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
           <div class="grid grid-cols-2 gap-4">
             <div>
               <label for="rev-prenom" class="block text-sm font-medium text-nautea-lagoon mb-2">Prénom *</label>
