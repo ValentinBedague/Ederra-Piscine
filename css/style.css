@@ -1,11 +1,11 @@
-/* Ederra Piscine - Custom styles */
+/* Nautea Piscine - Custom styles */
 :root {
-  --ederra-white: #FFFFFF;
-  --ederra-teal: #0399A6;
-  --ederra-lagoon: #0A7F8C;
-  --ederra-cyan: #4FD1DB;
-  --ederra-deep: #03354A;
-  --ederra-aqua: #D4EDED;
+  --nautea-white: #FFFFFF;
+  --nautea-teal: #0399A6;
+  --nautea-lagoon: #0A7F8C;
+  --nautea-cyan: #4FD1DB;
+  --nautea-deep: #03354A;
+  --nautea-aqua: #D4EDED;
 }
 
 html { scroll-behavior: smooth; }

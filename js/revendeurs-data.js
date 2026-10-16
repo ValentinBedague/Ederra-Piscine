@@ -1,4 +1,4 @@
-// Liste des revendeurs Ederra Piscine — seul fichier à modifier pour ajouter / changer un revendeur.
+// Liste des revendeurs Nautea Piscine — seul fichier à modifier pour ajouter / changer un revendeur.
 //
 // Pour ajouter un revendeur : copier un bloc { ... }, puis remplir les champs.
 //   slug       identifiant unique utilisé dans l'adresse de sa page (minuscules, tirets, sans accents)
@@ -8,7 +8,7 @@
 //   telephone, email : laisser '' si inconnu (affiché "à compléter")
 //   site, horaires : laisser '' si inconnu, la ligne n'est alors pas affichée
 //   exemple    true = fiche de démonstration (badge "Exemple") — à supprimer pour les vrais revendeurs
-window.EDERRA_REVENDEURS = [
+window.NAUTEA_REVENDEURS = [
   {
     slug: 'exemple-bayonne',
     nom: 'Revendeur exemple',

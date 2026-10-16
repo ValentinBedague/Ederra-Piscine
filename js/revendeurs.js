@@ -1,6 +1,6 @@
-// Ederra Piscine - Pages "Nos revendeurs" (liste) et "revendeur" (fiche), générées depuis js/revendeurs-data.js
+// Nautea Piscine - Pages "Nos revendeurs" (liste) et "revendeur" (fiche), générées depuis js/revendeurs-data.js
 (() => {
-  const REVENDEURS = window.EDERRA_REVENDEURS || [];
+  const REVENDEURS = window.NAUTEA_REVENDEURS || [];
 
   const DEPARTEMENTS = {
     '09': 'Ariège', '11': 'Aude', '12': 'Aveyron', '16': 'Charente', '17': 'Charente-Maritime',
@@ -38,29 +38,29 @@
     : `<div class="${cls} bg-water flex flex-col items-center justify-center gap-2 text-white/85">${icon('store', 'w-12 h-12')}<span class="text-sm font-medium tracking-wide">Photo de la devanture à venir</span></div>`;
 
   const badgeExemple = (r) => r.exemple
-    ? '<span class="bg-ederra-deep text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Exemple</span>'
+    ? '<span class="bg-nautea-deep text-white text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Exemple</span>'
     : '';
 
   // ---------- Liste ----------
   function carte(r) {
     const dep = departement(r);
     return `
-      <a href="${ficheUrl(r)}" class="group flex flex-col bg-white rounded overflow-hidden shadow-xl shadow-ederra-deep/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-ederra-teal">
+      <a href="${ficheUrl(r)}" class="group flex flex-col bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/10 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-nautea-teal">
         <div class="relative aspect-[4/3] overflow-hidden">
           ${visuel(r, 'w-full h-full group-hover:scale-105 transition-transform duration-300')}
           <div class="absolute top-3 left-3 right-3 flex items-start justify-between gap-2">
-            ${dep ? `<span class="bg-white/95 text-ederra-deep text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow">${esc(dep)}</span>` : '<span></span>'}
+            ${dep ? `<span class="bg-white/95 text-nautea-deep text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full shadow">${esc(dep)}</span>` : '<span></span>'}
             ${badgeExemple(r)}
           </div>
         </div>
         <div class="p-6 flex flex-col flex-grow">
-          <p class="text-ederra-teal text-sm font-semibold uppercase tracking-wide">${esc(r.ville)}</p>
-          <h2 class="text-xl font-bold text-ederra-deep mt-1 mb-4">${esc(r.nom)}</h2>
-          <ul class="space-y-2 text-sm text-ederra-deep/80 mb-6">
-            <li class="flex items-start gap-2 text-ederra-teal">${icon('pin', 'w-4 h-4 mt-0.5')}<span class="text-ederra-deep/80">${r.adresse ? esc(r.adresse) + '<br>' : ''}${esc(villeComplete(r))}</span></li>
-            ${r.telephone ? `<li class="flex items-center gap-2 text-ederra-teal">${icon('phone', 'w-4 h-4')}<span class="text-ederra-deep/80">${esc(r.telephone)}</span></li>` : ''}
+          <p class="text-nautea-teal text-sm font-semibold uppercase tracking-wide">${esc(r.ville)}</p>
+          <h2 class="text-xl font-bold text-nautea-deep mt-1 mb-4">${esc(r.nom)}</h2>
+          <ul class="space-y-2 text-sm text-nautea-deep/80 mb-6">
+            <li class="flex items-start gap-2 text-nautea-teal">${icon('pin', 'w-4 h-4 mt-0.5')}<span class="text-nautea-deep/80">${r.adresse ? esc(r.adresse) + '<br>' : ''}${esc(villeComplete(r))}</span></li>
+            ${r.telephone ? `<li class="flex items-center gap-2 text-nautea-teal">${icon('phone', 'w-4 h-4')}<span class="text-nautea-deep/80">${esc(r.telephone)}</span></li>` : ''}
           </ul>
-          <span class="mt-auto inline-flex items-center gap-2 text-ederra-teal font-semibold group-hover:gap-3 transition-all">Voir la fiche <span aria-hidden="true">→</span></span>
+          <span class="mt-auto inline-flex items-center gap-2 text-nautea-teal font-semibold group-hover:gap-3 transition-all">Voir la fiche <span aria-hidden="true">→</span></span>
         </div>
       </a>`;
   }
@@ -74,8 +74,8 @@
   function ligne(ic, label, contenu) {
     return `
       <li class="flex items-start gap-4">
-        <span class="w-10 h-10 rounded-full bg-ederra-aqua text-ederra-lagoon flex items-center justify-center">${icon(ic)}</span>
-        <div><p class="text-xs font-semibold uppercase tracking-wider text-ederra-teal">${label}</p><div class="text-ederra-deep mt-0.5">${contenu}</div></div>
+        <span class="w-10 h-10 rounded-full bg-nautea-aqua text-nautea-lagoon flex items-center justify-center">${icon(ic)}</span>
+        <div><p class="text-xs font-semibold uppercase tracking-wider text-nautea-teal">${label}</p><div class="text-nautea-deep mt-0.5">${contenu}</div></div>
       </li>`;
   }
 
@@ -88,15 +88,15 @@
     }
     const adresse = adresseComplete(r);
     const mapsQuery = encodeURIComponent(adresse);
-    document.title = `${r.nom} - ${r.ville} | Revendeur Ederra Piscine`;
-    document.querySelector('meta[name="description"]')?.setAttribute('content', `${r.nom}, revendeur Ederra Piscine à ${r.ville} : adresse, plan d'accès et contact.`);
+    document.title = `${r.nom} - ${r.ville} | Revendeur Nautea Piscine`;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', `${r.nom}, revendeur Nautea Piscine à ${r.ville} : adresse, plan d'accès et contact.`);
 
-    const aCompleter = (champ) => `<span class="italic text-ederra-deep/60">${champ} à compléter</span>`;
+    const aCompleter = (champ) => `<span class="italic text-nautea-deep/60">${champ} à compléter</span>`;
     const coords = [
       ligne('pin', 'Adresse', `${r.adresse ? esc(r.adresse) : aCompleter('Adresse')}<br>${esc(villeComplete(r))}`),
-      ligne('phone', 'Téléphone', r.telephone ? `<a href="${telHref(r.telephone)}" class="hover:text-ederra-teal transition-colors">${esc(r.telephone)}</a>` : aCompleter('Téléphone')),
-      ligne('mail', 'Email', r.email ? `<a href="mailto:${esc(r.email)}" class="hover:text-ederra-teal transition-colors break-all">${esc(r.email)}</a>` : aCompleter('Email')),
-      r.site && ligne('globe', 'Site web', `<a href="${esc(siteHref(r.site))}" target="_blank" rel="noopener noreferrer" class="hover:text-ederra-teal transition-colors break-all">${esc(r.site.replace(/^https?:\/\//, ''))}</a>`),
+      ligne('phone', 'Téléphone', r.telephone ? `<a href="${telHref(r.telephone)}" class="hover:text-nautea-teal transition-colors">${esc(r.telephone)}</a>` : aCompleter('Téléphone')),
+      ligne('mail', 'Email', r.email ? `<a href="mailto:${esc(r.email)}" class="hover:text-nautea-teal transition-colors break-all">${esc(r.email)}</a>` : aCompleter('Email')),
+      r.site && ligne('globe', 'Site web', `<a href="${esc(siteHref(r.site))}" target="_blank" rel="noopener noreferrer" class="hover:text-nautea-teal transition-colors break-all">${esc(r.site.replace(/^https?:\/\//, ''))}</a>`),
       r.horaires && ligne('clock', 'Horaires', esc(r.horaires).replace(/\n/g, '<br>')),
     ].filter(Boolean).join('');
 
@@ -120,18 +120,18 @@
         </div>
       </section>
 
-      <section class="py-12 md:py-16 bg-gradient-to-b from-ederra-aqua to-white">
+      <section class="py-12 md:py-16 bg-gradient-to-b from-nautea-aqua to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-10 items-start">
-          <div class="rounded overflow-hidden shadow-xl shadow-ederra-deep/15">
+          <div class="rounded overflow-hidden shadow-xl shadow-nautea-deep/15">
             ${visuel(r, 'w-full aspect-[4/3]')}
           </div>
-          <div class="bg-white rounded shadow-xl shadow-ederra-deep/10 border-t-4 border-ederra-teal p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-ederra-deep mb-4">Coordonnées</h2>
-            ${r.situation ? `<p class="text-ederra-deep/80 leading-relaxed mb-6 pl-4 border-l-4 border-ederra-aqua">${esc(r.situation)}</p>` : ''}
+          <div class="bg-white rounded shadow-xl shadow-nautea-deep/10 border-t-4 border-nautea-teal p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-nautea-deep mb-4">Coordonnées</h2>
+            ${r.situation ? `<p class="text-nautea-deep/80 leading-relaxed mb-6 pl-4 border-l-4 border-nautea-aqua">${esc(r.situation)}</p>` : ''}
             <ul class="space-y-5">${coords}</ul>
             <div class="mt-8 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3">
-              ${r.telephone ? `<a href="${telHref(r.telephone)}" class="flex-1 inline-flex items-center justify-center gap-2 bg-ederra-lagoon hover:bg-ederra-deep text-white font-semibold px-5 py-3 rounded transition-colors">${icon('phone', 'w-4 h-4')} Appeler</a>` : ''}
-              <a href="https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 border-2 border-ederra-teal text-ederra-lagoon hover:bg-ederra-aqua font-semibold px-5 py-3 rounded transition-colors">${icon('route', 'w-4 h-4')} Itinéraire</a>
+              ${r.telephone ? `<a href="${telHref(r.telephone)}" class="flex-1 inline-flex items-center justify-center gap-2 bg-nautea-lagoon hover:bg-nautea-deep text-white font-semibold px-5 py-3 rounded transition-colors">${icon('phone', 'w-4 h-4')} Appeler</a>` : ''}
+              <a href="https://www.google.com/maps/dir/?api=1&destination=${mapsQuery}" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 border-2 border-nautea-teal text-nautea-lagoon hover:bg-nautea-aqua font-semibold px-5 py-3 rounded transition-colors">${icon('route', 'w-4 h-4')} Itinéraire</a>
             </div>
           </div>
         </div>
@@ -139,8 +139,8 @@
 
       <section class="pb-16 md:pb-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 class="text-3xl md:text-4xl font-bold text-ederra-teal mb-6">Plan d'accès</h2>
-          <div class="rounded overflow-hidden shadow-xl shadow-ederra-deep/15 border-4 border-white">
+          <h2 class="text-3xl md:text-4xl font-bold text-nautea-teal mb-6">Plan d'accès</h2>
+          <div class="rounded overflow-hidden shadow-xl shadow-nautea-deep/15 border-4 border-white">
             <iframe src="https://www.google.com/maps?q=${mapsQuery}&output=embed" title="Plan d'accès - ${esc(r.nom)}, ${esc(r.ville)}" class="w-full h-[320px] md:h-[440px] block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="mt-12 bg-water rounded p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -148,7 +148,7 @@
               <p class="text-2xl md:text-3xl font-bold text-white text-shadow-hero">Un projet piscine ?</p>
               <p class="text-white/90 text-lg mt-1">Demandez votre devis, nous vous mettons en relation avec ce revendeur.</p>
             </div>
-            <button type="button" data-modal-open="modal-particulier" class="shrink-0 inline-flex items-center gap-2 bg-white hover:bg-ederra-aqua text-ederra-deep font-semibold px-8 py-4 rounded shadow-lg shadow-ederra-deep/30 hover:-translate-y-0.5 transition-all">Demander un devis →</button>
+            <button type="button" data-modal-open="modal-particulier" class="shrink-0 inline-flex items-center gap-2 bg-white hover:bg-nautea-aqua text-nautea-deep font-semibold px-8 py-4 rounded shadow-lg shadow-nautea-deep/30 hover:-translate-y-0.5 transition-all">Demander un devis →</button>
           </div>
         </div>
       </section>`;

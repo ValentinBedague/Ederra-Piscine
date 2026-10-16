@@ -1,4 +1,4 @@
-# Ederra Piscine - Site vitrine
+# Nautea Piscine - Site vitrine
 
 Site vitrine en HTML statique. Aucun build requis.
 
@@ -12,7 +12,7 @@ cursor/
 ├── css/style.css    # Styles personnalisés
 ├── js/site.js       # Menu mobile, carousel, modales
 ├── images/          # Photos du site
-├── logo/            # Logo Ederra
+├── logo/            # Logo Nautea
 └── favicon.svg
 ```
 

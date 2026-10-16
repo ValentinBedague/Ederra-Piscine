@@ -1,4 +1,4 @@
-// Ederra Piscine - Site interactivity
+// Nautea Piscine - Site interactivity
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.footer-year').forEach(el => {
     el.textContent = new Date().getFullYear();
