@@ -1,12 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="pool" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ABBFD8"/>
-      <stop offset="100%" style="stop-color:#193159"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="20" fill="#193159"/>
-  <path d="M20 50 Q50 30 80 50 Q50 70 20 50 Z" fill="url(#pool)" opacity="0.9"/>
-  <ellipse cx="50" cy="50" rx="25" ry="12" fill="#ABBFD8" opacity="0.6"/>
-  <rect x="45" y="35" width="10" height="30" rx="2" fill="#EEA85A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12.5 15.3 196 196">
+  <!-- Nautea Piscine - favicon (symbole du logo) -->
+  <style>path { fill: #0399A6; } @media (prefers-color-scheme: dark) { path { fill: #4FD1DB; } }</style>
+  <path d="M54.56 126.01V91.54L85.48 73.69L116.4 91.54V126.01L85.48 143.86L54.56 126.01ZM54.56 68.81L85.48 50.96L170.96 100.31V60.44L114.64 27.92C96.6 17.5 74.36 17.5 56.32 27.92L54.56 28.94V68.81ZM136.44 103.51V137.18L85.49 166.6L50.96 186.54L85.49 206.48L141.81 173.96C159.85 163.54 170.97 144.29 170.97 123.45L136.44 103.51ZM65.45 155.03L34.53 137.18V40.51L0 60.44V123.45C0 144.29 11.12 163.54 29.16 173.96L30.92 174.98L65.45 155.03Z"/>
 </svg>
