@@ -5,45 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nautea Piscine - Vente de piscines en kit et prêt-à-plonger. Plongez dans la qualité.">
   <title>Nautea Piscine - Piscines en kit et prêt-à-plonger</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'nautea-white': '#FFFFFF',
-            'nautea-teal': '#0399A6',   // turquoise vif (titres, accents)
-            'nautea-lagoon': '#0A7F8C', // turquoise foncé (boutons texte blanc)
-            'nautea-cyan': '#4FD1DB',   // cyan lumineux (accents sur fond sombre)
-            'nautea-deep': '#03354A',   // bleu pétrole (texte, footer)
-            'nautea-aqua': '#D4EDED',   // aqua clair (fonds)
-          },
-          fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+  <link rel="canonical" href="https://www.nautea-piscine.fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nautea Piscine">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://www.nautea-piscine.fr/">
+  <meta property="og:title" content="Nautea Piscine - Piscines en kit et prêt-à-plonger">
+  <meta property="og:description" content="Nautea Piscine - Vente de piscines en kit et prêt-à-plonger. Plongez dans la qualité.">
+  <meta property="og:image" content="https://www.nautea-piscine.fr/images/hero-pool.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Piscine Nautea dans un jardin">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="/images/hero-pool.webp" imagesrcset="/images/hero-pool-1280.webp 1280w, /images/hero-pool.webp 1920w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="/css/nautea.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.nautea-piscine.fr/#entreprise",
+      "name": "Nautea Piscine",
+      "url": "https://www.nautea-piscine.fr/",
+      "logo": "https://www.nautea-piscine.fr/images/logo_nautea_vif.svg",
+      "image": "https://www.nautea-piscine.fr/images/hero-pool.jpg",
+      "description": "Vente de piscines en kit et prêt-à-plonger : piscines en béton armé en structure blocs polystyrène technique.",
+      "telephone": "+33 5 40 07 35 65",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "435 Avenue d'Espagne",
+        "postalCode": "64210",
+        "addressLocality": "Bidart",
+        "addressRegion": "Nouvelle-Aquitaine",
+        "addressCountry": "FR"
+      },
+      "hasMap": "https://www.google.com/maps?q=435+Av.+d%27Espagne,+64210+Bidart",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Piscine Kit Autonome",
+            "url": "https://www.nautea-piscine.fr/prestations#kit-autonome"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Piscine Kit Accompagné",
+            "url": "https://www.nautea-piscine.fr/prestations#kit-accompagne"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Piscine Prête-à-Plonger",
+            "url": "https://www.nautea-piscine.fr/prestations#prete-a-plonger"
+          }
         }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nautea-piscine.fr/#site",
+      "url": "https://www.nautea-piscine.fr/",
+      "name": "Nautea Piscine",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://www.nautea-piscine.fr/#entreprise"
       }
     }
+  ]
+}
   </script>
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="min-h-screen flex flex-col">
   <!-- Header -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-nautea-teal/20">
     <nav class="w-full px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 md:h-28">
-        <a href="index.html" class="flex items-center">
-          <img src="images/logo_nautea_vif.svg" alt="Nautea Piscine" class="h-16 md:h-20 lg:h-24 w-auto">
+        <a href="/" class="flex items-center">
+          <img src="/images/logo_nautea_vif.svg" alt="Nautea Piscine" class="h-16 md:h-20 lg:h-24 w-auto">
         </a>
         <div class="hidden lg:flex items-center gap-8">
-          <a href="index.html" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Accueil</a>
-          <a href="prestations.html" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Nos Prestations</a>
-          <a href="revendeurs.html" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Nos revendeurs</a>
-          <a href="contact.html" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Contact</a>
+          <a href="/" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Accueil</a>
+          <a href="/prestations" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Nos Prestations</a>
+          <a href="/revendeurs" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Nos revendeurs</a>
+          <a href="/contact" class="text-nautea-deep hover:text-nautea-teal transition-colors font-medium text-lg">Contact</a>
         </div>
         <button id="menu-btn" class="lg:hidden p-2 text-nautea-deep" aria-label="Menu">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
@@ -51,10 +106,10 @@
       </div>
       <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-nautea-teal/20">
         <div class="flex flex-col gap-4">
-          <a href="index.html" class="text-nautea-deep hover:text-nautea-teal font-medium">Accueil</a>
-          <a href="prestations.html" class="text-nautea-deep hover:text-nautea-teal font-medium">Nos Prestations</a>
-          <a href="revendeurs.html" class="text-nautea-deep hover:text-nautea-teal font-medium">Nos revendeurs</a>
-          <a href="contact.html" class="text-nautea-deep hover:text-nautea-teal font-medium">Contact</a>
+          <a href="/" class="text-nautea-deep hover:text-nautea-teal font-medium">Accueil</a>
+          <a href="/prestations" class="text-nautea-deep hover:text-nautea-teal font-medium">Nos Prestations</a>
+          <a href="/revendeurs" class="text-nautea-deep hover:text-nautea-teal font-medium">Nos revendeurs</a>
+          <a href="/contact" class="text-nautea-deep hover:text-nautea-teal font-medium">Contact</a>
         </div>
       </div>
     </nav>
@@ -64,7 +119,7 @@
     <!-- Hero -->
     <section class="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center pt-16">
       <div class="absolute inset-0">
-        <img src="images/hero-pool.jpg" alt="Belle piscine dans un jardin" class="w-full h-full object-cover saturate-[1.15]">
+        <img src="/images/hero-pool.webp" srcset="/images/hero-pool-1280.webp 1280w, /images/hero-pool.webp 1920w" sizes="100vw" width="1920" height="1080" fetchpriority="high" alt="Belle piscine dans un jardin" class="w-full h-full object-cover saturate-[1.15]">
         <div class="absolute inset-0 bg-gradient-to-b from-nautea-deep/75 via-nautea-deep/45 to-nautea-teal/30"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center text-shadow-hero">
@@ -90,7 +145,7 @@
             <span class="text-white font-medium text-sm uppercase tracking-widest">Prête à plonger</span>
           </div>
         </div>
-        <a href="prestations.html" class="inline-flex items-center gap-2 bg-white hover:bg-nautea-cyan text-nautea-deep font-semibold px-8 py-4 rounded shadow-lg shadow-nautea-deep/40 hover:-translate-y-0.5 transition-all [text-shadow:none]">
+        <a href="/prestations" class="inline-flex items-center gap-2 bg-white hover:bg-nautea-cyan text-nautea-deep font-semibold px-8 py-4 rounded shadow-lg shadow-nautea-deep/40 hover:-translate-y-0.5 transition-all [text-shadow:none]">
           Découvrir nos prestations
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -120,9 +175,9 @@
     <section class="py-12 md:py-16 bg-gradient-to-b from-white to-nautea-aqua">
       <div class="w-full px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
-          <img src="images/home-1.jpg" alt="Petite piscine enterrée avec terrasse en bois et jardin fleuri" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
-          <img src="images/piscine-bidart.jpg" alt="Piscine à Bidart avec plage en pierre claire et palmiers" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
-          <img src="images/home-3.jpg" alt="Piscine intérieure avec plage en bois et spa" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
+          <img src="/images/home-1.webp" width="637" height="478" loading="lazy" decoding="async" alt="Petite piscine enterrée avec terrasse en bois et jardin fleuri" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
+          <img src="/images/piscine-bidart.webp" width="640" height="335" loading="lazy" decoding="async" alt="Piscine à Bidart avec plage en pierre claire et palmiers" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
+          <img src="/images/home-3.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Piscine intérieure avec plage en bois et spa" class="w-full aspect-[4/3] object-cover rounded shadow-lg">
         </div>
       </div>
     </section>
@@ -132,9 +187,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 md:mb-16 text-shadow-hero">Nos Savoir-Faire</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          <a href="prestations.html#kit-autonome" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <a href="/prestations#kit-autonome" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="images/kit-autonome-2.jpg" alt="Kit Autonome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="/images/kit-autonome-2.webp" width="900" height="502" loading="lazy" decoding="async" alt="Kit Autonome" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
               <h3 class="text-xl font-semibold text-nautea-deep mb-3">Kit Autonome</h3>
@@ -142,9 +197,9 @@
               <span class="inline-flex items-center gap-2 text-nautea-teal font-semibold">En savoir plus →</span>
             </div>
           </a>
-          <a href="prestations.html#kit-accompagne" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <a href="/prestations#kit-accompagne" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="images/kit-accompagne.jpg" alt="Kit Accompagné" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="/images/kit-accompagne.webp" width="800" height="800" loading="lazy" decoding="async" alt="Kit Accompagné" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
               <h3 class="text-xl font-semibold text-nautea-deep mb-3">Kit Accompagné</h3>
@@ -152,9 +207,9 @@
               <span class="inline-flex items-center gap-2 text-nautea-teal font-semibold">En savoir plus →</span>
             </div>
           </a>
-          <a href="prestations.html#prete-a-plonger" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <a href="/prestations#prete-a-plonger" class="group bg-white rounded overflow-hidden shadow-xl shadow-nautea-deep/25 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
             <div class="aspect-[4/3] overflow-hidden">
-              <img src="images/prete-a-plonger.jpg" alt="Prête-à-Plonger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              <img src="/images/prete-a-plonger.webp" width="800" height="800" loading="lazy" decoding="async" alt="Prête-à-Plonger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
             </div>
             <div class="p-6 md:p-8">
               <h3 class="text-xl font-semibold text-nautea-deep mb-3">Prête-à-Plonger</h3>
@@ -165,7 +220,7 @@
         </div>
 
         <div class="text-center mt-12">
-          <a href="prestations.html" class="inline-flex items-center gap-2 bg-white hover:bg-nautea-aqua text-nautea-deep font-semibold px-8 py-4 rounded shadow-lg shadow-nautea-deep/30 hover:-translate-y-0.5 transition-all">
+          <a href="/prestations" class="inline-flex items-center gap-2 bg-white hover:bg-nautea-aqua text-nautea-deep font-semibold px-8 py-4 rounded shadow-lg shadow-nautea-deep/30 hover:-translate-y-0.5 transition-all">
             Voir le catalogue complet →
           </a>
         </div>
@@ -178,20 +233,20 @@
     <div class="w-full px-8 sm:px-12 lg:px-20 py-12 md:py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr] gap-8 md:gap-12">
         <div class="md:col-span-2 lg:col-span-1">
-          <img src="images/logo_nautea_vif_footer.svg" alt="Nautea Piscine" class="w-full max-w-[380px] h-auto mb-4">
+          <img src="/images/logo_nautea_vif_footer.svg" loading="lazy" alt="Nautea Piscine" class="w-full max-w-[380px] h-auto mb-4">
           <p class="text-white/80 text-lg font-light">Vente de piscines en kit et prêt-à-plonger.<br>Plongez dans la qualité.</p>
         </div>
         <div class="text-center">
-          <h4 class="text-lg font-normal uppercase tracking-wider text-white mb-4">Navigation</h4>
+          <p class="text-lg font-normal uppercase tracking-wider text-white mb-4">Navigation</p>
           <ul class="space-y-3 text-lg font-light">
-            <li><a href="index.html" class="text-white/80 hover:text-nautea-cyan transition-colors">Accueil</a></li>
-            <li><a href="prestations.html" class="text-white/80 hover:text-nautea-cyan transition-colors">Nos Prestations</a></li>
-            <li><a href="revendeurs.html" class="text-white/80 hover:text-nautea-cyan transition-colors">Nos revendeurs</a></li>
-            <li><a href="contact.html" class="text-white/80 hover:text-nautea-cyan transition-colors">Contact</a></li>
+            <li><a href="/" class="text-white/80 hover:text-nautea-cyan transition-colors">Accueil</a></li>
+            <li><a href="/prestations" class="text-white/80 hover:text-nautea-cyan transition-colors">Nos Prestations</a></li>
+            <li><a href="/revendeurs" class="text-white/80 hover:text-nautea-cyan transition-colors">Nos revendeurs</a></li>
+            <li><a href="/contact" class="text-white/80 hover:text-nautea-cyan transition-colors">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-lg font-normal uppercase tracking-wider text-white mb-4">Contact</h4>
+          <p class="text-lg font-normal uppercase tracking-wider text-white mb-4">Contact</p>
           <a href="tel:0540073565" class="flex items-center gap-3 text-lg font-light text-white/80 hover:text-nautea-cyan mb-4">📞 05 40 07 35 65</a>
           <a href="https://www.google.com/maps?q=435+Av.+d%27Espagne,+64210+Bidart" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-lg font-light text-white/80 hover:text-nautea-cyan transition-colors not-italic">
             📍 435 Av. d'Espagne, 64210 Bidart, France
@@ -200,10 +255,11 @@
       </div>
       <div class="mt-12 pt-8 border-t border-white/15 text-center text-white/60 text-lg font-light">
         © <span class="footer-year"></span> Nautea Piscine. Tous droits réservés.
+        <p class="mt-3 text-base"><a href="/mentions-legales" class="hover:text-nautea-cyan transition-colors">Mentions légales</a> · <a href="/confidentialite" class="hover:text-nautea-cyan transition-colors">Politique de confidentialité</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="js/site.js"></script>
+  <script src="/js/site.js"></script>
 </body>
 </html>

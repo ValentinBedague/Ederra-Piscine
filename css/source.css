@@ -1,4 +1,19 @@
-/* Nautea Piscine - Custom styles */
+/* Nautea Piscine - Source des styles (compilée vers css/nautea.css : npm run build:css) */
+
+/* DM Sans hébergée sur le site (police variable, graisses 100 à 1000, jeu latin) */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url(/fonts/dm-sans-latin.woff2) format('woff2-variations'), url(/fonts/dm-sans-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --nautea-white: #FFFFFF;
   --nautea-teal: #0399A6;
@@ -47,3 +62,10 @@ body { font-family: 'DM Sans', system-ui, sans-serif; }
 }
 .modal-card-leave    { animation: modalOut    0.2s ease-in forwards; }
 .modal-backdrop-leave { animation: backdropOut 0.2s ease-in forwards; }
+
+/* Pages légales et 404 : mise en forme du texte courant */
+.legal h2 { @apply text-2xl font-bold text-nautea-teal mt-10 mb-3; }
+.legal h2:first-child { @apply mt-0; }
+.legal p, .legal ul { @apply text-nautea-deep/90 leading-relaxed mb-4; }
+.legal ul { @apply list-disc pl-6 space-y-1; }
+.legal a:not(.no-underline) { @apply underline hover:text-nautea-teal; }

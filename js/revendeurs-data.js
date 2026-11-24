@@ -2,7 +2,7 @@
 //
 // Pour ajouter un revendeur : copier un bloc { ... }, puis remplir les champs.
 //   slug       identifiant unique utilisé dans l'adresse de sa page (minuscules, tirets, sans accents)
-//              ex. 'piscines-dupont-bayonne' -> revendeur.html#piscines-dupont-bayonne
+//              ex. 'piscines-dupont-bayonne' -> /revendeur#piscines-dupont-bayonne
 //   photo      photo de la devanture, à déposer dans images/revendeurs/ (laisser '' = visuel par défaut)
 //   situation  court paragraphe affiché dans les coordonnées (ex. 'Le magasin se situe à l'entrée de la zone…')
 //   email      obligatoire : les demandes de devis de la fiche sont envoyées à cette adresse

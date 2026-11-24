@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal('btn-particulier', 'modal-particulier');
   initModal('btn-revendeur', 'modal-revendeur');
 
-  // contact.html#revendeur (lien "Devenir revendeur") : ouvre directement le formulaire revendeur
+  // /contact#revendeur (lien "Devenir revendeur") : ouvre directement le formulaire revendeur
   if (location.hash === '#revendeur') document.getElementById('btn-revendeur')?.click();
 
   // Envoi des formulaires vers api/contact.js (email via Resend)

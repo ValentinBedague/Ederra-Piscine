@@ -18,7 +18,7 @@
   const adresseComplete = (r) => [r.adresse, villeComplete(r), 'France'].filter(Boolean).join(', ');
   const telHref = (t) => 'tel:' + String(t).replace(/[^\d+]/g, '');
   const siteHref = (s) => (/^https?:\/\//.test(s) ? s : 'https://' + s);
-  const ficheUrl = (r) => `revendeur.html#${encodeURIComponent(r.slug)}`;
+  const ficheUrl = (r) => `/revendeur#${encodeURIComponent(r.slug)}`;
 
   const ICONS = {
     pin: '<path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
@@ -109,7 +109,7 @@
     root.querySelector('[data-fiche]').innerHTML = `
       <section class="pt-20 md:pt-28 bg-water">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 text-white">
-          <a href="revendeurs.html" class="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors">← Tous les revendeurs</a>
+          <a href="/revendeurs" class="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-medium transition-colors">← Tous les revendeurs</a>
           <div class="mt-6 flex flex-wrap items-center gap-3">
             <span class="text-white/90 text-sm font-semibold uppercase tracking-widest">${esc(departement(r))}</span>
             ${badgeExemple(r)}
