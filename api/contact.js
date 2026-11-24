@@ -1,6 +1,6 @@
-// Nautea Piscine - Envoi des formulaires par email (fonction Vercel + API Resend)
+// Nautea Piscine - Envoi des formulaires par email (route /api/contact de server.js + API Resend)
 //
-// Variables d'environnement (Vercel > Settings > Environment Variables) :
+// Variables d'environnement (Railway > service > Variables) :
 //   RESEND_API_KEY  clé API Resend (obligatoire)
 //   CONTACT_EMAIL   destinataire Nautea (défaut : contact@nautea-piscine.fr)
 //   FROM_EMAIL      expéditeur, sur le domaine vérifié dans Resend

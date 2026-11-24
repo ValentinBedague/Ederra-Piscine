@@ -2,8 +2,16 @@
   "name": "nautea-piscine",
   "private": true,
   "version": "1.0.0",
+  "description": "Site vitrine Nautea Piscine (serveur Node/Express, hébergé sur Railway)",
+  "main": "server.js",
   "scripts": {
-    "dev": "npx serve . -l 3000",
-    "start": "npx serve . -l 3000"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
   }
 }
