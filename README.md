@@ -17,8 +17,7 @@ hébergé sur **Railway**. Aucun build : le serveur sert directement les fichier
 ├── js/revendeurs-data.js # Liste des revendeurs (seul fichier à modifier pour en ajouter)
 ├── images/               # Photos et logos
 ├── api/contact.js        # Envoi des formulaires par email (Resend)
-├── server.js             # Serveur Express (pages, adresses propres, /api/contact, redirections)
-└── railway.json          # Configuration Railway
+└── server.js             # Serveur Express (pages, adresses propres, /api/contact, redirections)
 ```
 
 Seuls les pages, `css/`, `js/`, `images/` et les icônes sont publiés : le reste du projet n'est pas accessible en ligne.
@@ -44,7 +43,8 @@ Sans `RESEND_API_KEY`, les formulaires répondent « L'envoi n'est pas encore co
 
 ## Déploiement (Railway)
 
-Railway déploie automatiquement à chaque push sur la branche reliée au service (`npm start`).
+Railway déploie automatiquement à chaque push sur `main` (commande `npm start`, port 8080 sur le domaine).
+Vérification de santé conseillée dans Railway (Settings > Deploy > Healthcheck Path) : `/health`.
 
 Variables d'environnement du service :
 
